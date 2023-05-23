@@ -1,0 +1,9 @@
+body {
+  background-color: #e8f1f8;
+}
+
+.app__content {
+  padding-top: 20px;
+  display: flex;
+  gap: 28px;
+}
