@@ -10,7 +10,6 @@ function Scpay(props) {
     <div className="app__scpay">
       <div className="scpay__header">
         <span className="spay__time">{Dates.currentTime()}</span>
-
         <div className="scpay__right">
           <div className="spacy__data">
             <div className="spacy__1"></div>
@@ -19,19 +18,16 @@ function Scpay(props) {
             <div className="spacy__4"></div>
           </div>
           <div className="data__scpay">{Names.generateRandomSignal()}</div>
-
           <div className="bbaa__scpay">
             <div className="scapy__battery">
               <div className="level__scapy" style={{ width: `${limit}%` }}>
                 {" "}
               </div>
             </div>
-
             <div className="scpay__border"></div>
           </div>
         </div>
       </div>
-
       <div className="scpay__logo">
         <img src="/scpay/logo.png" alt="" width={387} />
       </div>
@@ -44,7 +40,7 @@ function Scpay(props) {
           </span>
           &nbsp;
           <span className="chinesetext"> 給</span>&nbsp;
-          <span className="englishtext">{Names.generateRandomFullName()}</span>
+          <span className="englishtext">{Names.generateRandomName()}</span>
         </div>
         <div className="scpay__number">+852-98888888</div>
         <div className="detail__scapy">

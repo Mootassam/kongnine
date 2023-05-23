@@ -41,18 +41,15 @@ function Fly(props) {
         </div>
 
         <div className="fly__title">你已成功付款給</div>
-
         <div className="fly__number">10505{Number.generateRandom4Number()}</div>
-
         <div className="fly__description">
           <span>轉數快」</span>
           <span>註册帳戶為</span>
-          <span className="fly__roboto">CHAN Y** H**</span>
+          <span className="fly__roboto">{Names.generateRandomName()}</span>
         </div>
-
         <div className="totalfly__amount">
           <div className="fly__currency">HKD</div>
-          <div className="fly__amount">{Number.hongkong(props.amount)}</div>
+          <div className="fly__amount">{Number.hongkongstyle2(props.amount)}</div>
         </div>
       </div>
 

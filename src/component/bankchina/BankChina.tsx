@@ -2,6 +2,7 @@ import React from "react";
 import "./bankChina.css";
 import Dates from "../../shared/dates";
 import Number from "../../shared/Number";
+import Names from "../../shared/Names";
 function BankChina(props) {
   return (
     <div className="app__china">
@@ -46,7 +47,7 @@ function BankChina(props) {
         <div className="contentchina__detail normalspace">
           <div className="china__left">收款人/賬户</div>
           <div className="china__right __detail">
-            <span>YU W** M***</span>
+            <span>{Names.generateRandomName()}</span>
             <span>+852-67598857</span>
             <span>轉數快-預設收款銀行/機構</span>
           </div>
