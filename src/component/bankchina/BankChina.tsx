@@ -53,7 +53,7 @@ function BankChina(props) {
         </div>
         <div className="contentchina__detail normalspace">
           <div className="china__left">轉賬金額</div>
-          <div className="china__right __specialfont ">港元{Number.hongkong(props.amount)}</div>
+          <div className="china__right __specialfont ">港元{Number.hongkongstyle2(props.amount)}</div>
         </div>
         <div className="contentchina__detail normalspace">
           <div className="china__left">轉賬費用</div>

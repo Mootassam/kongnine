@@ -56,7 +56,14 @@ class Number {
     return hkdAmount.toLocaleString('en-HK', {
       style: 'currency',
       currency: 'HKD',
-    }).replace('HK$', '');;
+    }).replace('HK$', '');
+  }
+
+  static hongkongstyle2(amount){ 
+    const exchangeRate = 1; // Replace with the actual exchange rate
+    const hkdAmount = amount * exchangeRate;
+    const formattedAmount = hkdAmount.toFixed(2);
+    return formattedAmount;
   }
 
   static generate4RandomNumber(){ 
