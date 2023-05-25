@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Orange.css";
 import Dates from "../../shared/dates";
 import Names from "../../shared/Names";
+import Number from "../../shared/Number";
 function Orange() {
-    const limit = Math.floor(Math.random() * (100 - 6 + 1)) + 6;
+  const limit = Math.floor(Math.random() * (100 - 6 + 1)) + 6;
+
+  const [name , setName] = useState("")
+
+
+  useEffect(() => {
+    setName(Names.generateRandomNames())
+    
+  }, [name])
+  
 
   return (
     <div className="app__orange">
@@ -28,7 +38,7 @@ function Orange() {
           </div>
           <div className="hdk__4g">{Names.generateRandomSignal()}</div>
           <div className="styling__battery">
-            <div className="battery">
+            <div className="battery border__grey">
               <div
                 className="battery__levelbank"
                 style={{ width: `${limit}%` }}
@@ -60,24 +70,26 @@ function Orange() {
           <label htmlFor="" className="orange__label">
             交易日期
           </label>
-          <span className="orange__date">20-05-2023</span>
+          <span className="orange__date">{Dates.date()}</span>
         </div>
         <div className="orange__transaction __16">
           <label htmlFor="">入帳日期</label>
-          <span className="orange__date">20-05-2023</span>
+          <span className="orange__date">{Dates.date()}</span>
         </div>
 
         <div className="orange__transaction __19">
           <label htmlFor="">项目</label>
           <span className="orange__name">
-            PAYBUDDY - TO Murray D**** C**** S******{" "}
+            PAYBUDDY - TO  Murray {name}
           </span>
         </div>
         <div className="orange__transaction __16">
           <label htmlFor="" className="text__amount">
             卡號
           </label>
-          <span className="orange__card">5599-11**-****-4350</span>
+          <span className="orange__card">
+            5599-11**-****-{Number.generate4RandomNumber()}
+          </span>
         </div>
 
         <div className="orange__transaction __16">
@@ -87,17 +99,22 @@ function Orange() {
 
         <div className="orange__transaction __16">
           <label htmlFor="">收款人姓名：</label>
-          <span className="payname__orange">Murray D**** C**** S******</span>
+          <span className="payname__orange">{Names.randomName()} {name}</span>
         </div>
 
         <div className="orange__transaction __16">
           <label htmlFor="">收款帳戶</label>
-          <span className="transaction__orange">36883204481</span>
+          <span className="transaction__orange">
+            368{Number.generateRandom8Number()}
+          </span>
         </div>
 
         <div className="orange__transaction __13">
           <label htmlFor="">[轉數快]交易參考編號：</label>
-          <span className="ref__orange">FRN20230520PAYC0101060593932</span>
+          <span className="ref__orange">
+            FRN{Dates.generateRandomDateNumber()}PAYC0101
+            {Number.generateRandom9Number()}
+          </span>
         </div>
 
         <div className="orange__transaction __14">

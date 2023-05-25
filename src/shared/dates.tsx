@@ -22,6 +22,13 @@ class Dates {
     return dateTime;
   }
 
+
+  static date(){ 
+    const date = moment().format('DD-MM-YYYY') ;
+    return date; 
+  }
+
+
   static hangSeng() {
     const date = moment().format("DD/MM/YYYY");
     return date;

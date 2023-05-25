@@ -174,6 +174,42 @@ class Names {
 
     return formattedName;
   }
+
+  static generateRandomNames() {
+    const firstNames = ['Murray', 'David', 'Catherine', 'Samuel'];
+    const lastNames = ['Doe', 'Smith', 'Johnson', 'Brown'];
+  
+    const getRandomElement = (array) => {
+      const randomIndex = Math.floor(Math.random() * array.length);
+      return array[randomIndex];
+    };
+  
+    const formatName = (name) => {
+      const formattedName = name.split('').map((char, index) => {
+        if (index === 0) {
+          return char;
+        }
+        return '*';
+      });
+      return formattedName.join('');
+    };
+  
+    const randomFirstName = getRandomElement(firstNames);
+    const randomLastName = getRandomElement(lastNames);
+    const formattedFirstName = formatName(randomFirstName);
+    const formattedLastName = formatName(randomLastName);
+  
+    return `${formattedFirstName} ${formattedLastName}`;
+  }
+
+  static randomName(){ 
+    const names = ['Samantha', 'Ethan', 'Chloe', 'Ryan', 'Emily'];
+    const randomIndex = Math.floor(Math.random() * names.length);
+    const randomName = names[randomIndex];
+    return randomName
+
+  }
+  
 }
 
 export default Names;
