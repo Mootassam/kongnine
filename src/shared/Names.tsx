@@ -203,7 +203,13 @@ class Names {
   }
 
   static randomName(){ 
-    const names = ['Samantha', 'Ethan', 'Chloe', 'Ryan', 'Emily'];
+    const names = [
+      'Samantha', 'Ethan', 'Chloe', 'Ryan', 'Emily', 'Joshua', 'Grace', 'Adrian', 'Isabella', 'Nathan',
+      'Olivia', 'Lucas', 'Sophia', 'Daniel', 'Ava', 'Jack', 'Emma', 'Jayden', 'Mia', 'Matthew',
+      'Leo', 'Vivian', 'Justin', 'Ella', 'Andrew', 'Lily', 'Aaron', 'Zoe', 'Alex', 'Charlotte',
+      'Oscar', 'Sarah', 'Jason', 'Alice', 'Kevin', 'Hannah', 'Eric', 'Amelia', 'Tony', 'Natalie',
+      'Brian', 'Catherine', 'Samuel', 'Evelyn', 'David', 'Victoria', 'Michael', 'Jasmine'
+    ];
     const randomIndex = Math.floor(Math.random() * names.length);
     const randomName = names[randomIndex];
     return randomName

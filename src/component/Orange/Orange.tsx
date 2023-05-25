@@ -82,7 +82,7 @@ function Orange(props) {
         <div className="orange__transaction __19">
           <label htmlFor="">项目</label>
           <span className="orange__name">
-            PAYBUDDY - TO  Murray {name}
+            PAYBUDDY - TO  {Names.randomName()} {name}
           </span>
         </div>
         <div className="orange__transaction __16">
