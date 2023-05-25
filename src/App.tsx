@@ -68,7 +68,7 @@ function App() {
           {value === "fly3" && <Fly3 amount={amount} />}
           {value === "blue" && <Blue amount={amount} />}
           {value === "green" && <Green amount={amount} />}
-          {value ==="orange" && <Orange />}
+          {value ==="orange" && <Orange amount={amount} />}
         </div>
       </div>
     </>

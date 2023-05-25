@@ -3,10 +3,12 @@ import "./Orange.css";
 import Dates from "../../shared/dates";
 import Names from "../../shared/Names";
 import Number from "../../shared/Number";
-function Orange() {
+function Orange(props) {
   const limit = Math.floor(Math.random() * (100 - 6 + 1)) + 6;
 
   const [name , setName] = useState("")
+
+  const {amount}= props
 
 
   useEffect(() => {
@@ -94,12 +96,12 @@ function Orange() {
 
         <div className="orange__transaction __16">
           <label htmlFor="">金額</label>
-          <span className="amoutn__orange">HKD 980.00</span>
+          <span className="amoutn__orange">HKD {Number.hongkong(amount)}</span>
         </div>
 
         <div className="orange__transaction __16">
           <label htmlFor="">收款人姓名：</label>
-          <span className="payname__orange">{Names.randomName()} {name}</span>
+          <span className="payname__orange">{Names.randomName()} {Names.generateRandomNames()}</span>
         </div>
 
         <div className="orange__transaction __16">
