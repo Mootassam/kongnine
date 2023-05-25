@@ -22,6 +22,7 @@ import Fly3 from "./component/Fly3/Fly3";
 import Blue from "./component/Blue/Blue";
 import Thank from "./component/thank/Thank";
 import Green from "./component/green/Green";
+import Orange from "./component/Orange/Orange";
 
 function App() {
   const divRef = useRef<HTMLDivElement>(null);
@@ -67,6 +68,7 @@ function App() {
           {value === "fly3" && <Fly3 amount={amount} />}
           {value === "blue" && <Blue amount={amount} />}
           {value === "green" && <Green amount={amount} />}
+          {value ==="orange" && <Orange />}
         </div>
       </div>
     </>

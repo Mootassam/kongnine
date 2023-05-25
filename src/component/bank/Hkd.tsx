@@ -7,7 +7,6 @@ import Names from "../../shared/Names";
 function Hkd(props) {
   const limit = Math.floor(Math.random() * (100 - 6 + 1)) + 6;
 
-
   return (
     <div className="app__hkd">
       <div className="hdk__header">
@@ -27,9 +26,7 @@ function Hkd(props) {
               <div className="__grey"></div>
             </div>
           </div>
-
           <div className="hdk__4g">{Names.generateRandomSignal()}</div>
-
           <div className="styling__battery">
             <div className="battery">
               <div
